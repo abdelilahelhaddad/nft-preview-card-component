@@ -132,4 +132,8 @@ body {
       }
     }
   }
+
+  @media screen AND (max-width:400px) {
+    margin: 0 5%;
+  }
 }
