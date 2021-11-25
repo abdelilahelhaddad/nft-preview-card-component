@@ -19,6 +19,7 @@ $White: hsl(0, 0%, 100%);
 body {
   font-family: 'Outfit', sans-serif;
   font-size: 18px;
+  font-weight: 400;
   background-color: $Very-dark-blue-main-bg;
   color: $Soft-blue;
   min-height: 100vh;
@@ -30,10 +31,105 @@ body {
 #main {
   background-color: $Very-dark-blue-card-bg;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.7rem;
+  width: 375px;
+  margin: 0 auto;
 
   .image {
     background-image: url('/images/image-equilibrium.jpg');
+    background-size: cover;
+    background-position: center;
     border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    cursor: pointer;
+
+    svg {
+      display: none;
+    }
+
+    &:hover {
+      background-color: rgba($color: $Cyan, $alpha: 0.6);
+      background-blend-mode: screen;
+
+      svg {
+        display: block;
+      }
+    }
+  }
+
+  .content {
+    h1 {
+      color: $White;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 1.5rem 0;
+      cursor: pointer;
+
+      &:hover {
+        color: $Cyan;
+      }
+    }
+
+    .price_and_daysLeft {
+      display: flex;
+      justify-content: space-between;
+      margin: 1.5rem 0;
+
+      .price,
+      .days_left {
+        display: flex;
+        align-items: center;
+
+        p {
+          margin-left: 0.4rem;
+          font-weight: 300;
+        }
+      }
+
+      .price {
+        p {
+          font-weight: 600;
+          color: $Cyan;
+        }
+      }
+    }
+
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: $Very-dark-blue-line;
+    }
+
+    .creator_infos {
+      display: flex;
+      align-items: center;
+      margin-top: 1.2rem;
+
+      .avatar {
+
+        img {
+          width: 36px;
+          border: 2px solid $White;
+          border-radius: 50%;
+        }
+      }
+
+      p {
+        margin-left: 1.5rem;
+        font-weight: 300;
+
+        .name {
+          color: $White;
+
+          &:hover {
+            color: $Cyan;
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 }
